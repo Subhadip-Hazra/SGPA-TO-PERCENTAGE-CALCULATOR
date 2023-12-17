@@ -20,6 +20,28 @@
         background-color: rgba(148, 130, 252, 0.578);
         display: grid;
     }
+    h3,
+        .form,
+        .calculator,
+        .input,
+        .output,
+        .container,
+        footer{
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fade-in 2s ease-in-out forwards;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     h3{
         display: grid;
         text-align: center;
