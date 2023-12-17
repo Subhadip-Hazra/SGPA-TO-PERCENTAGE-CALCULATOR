@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Other meta tags for description, author, and social media sharing -->
+    <meta name="description" content="Now you can easily calculate your percentage using our website.">
+    <meta name="author" content="Subhadip Hazra">
+    <meta property="og:title" content="Sgpa to Percentage calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/calculator.png">
+    <meta property="og:locate" content="en">
+    <meta property="og:site_name" content="Sgpa to percentage calculator">
+    <link rel="icon" href="images/calculator.png" type="image/x-icon">
+    <title>Sgpa to Percentage Calculator</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script:wght@700&family=Ephesis&family=Inter:wght@300&family=Lugrasimo&family=Roboto:wght@100&family=Rubik+Doodle+Shadow&display=swap');
+    body{
+        background-color: rgba(148, 130, 252, 0.578);
+        display: grid;
+    }
+    h3{
+        display: grid;
+        text-align: center;
+        font-family: Rubik Doodle;
+
+    }
+    .calculator{
+        display: grid;
+        margin: auto;
+        justify-content: center;
+        color: #0e0c26;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .input{
+        display: grid;
+        background-color: rgba(242, 238, 250, 0.477);
+        justify-content: center;
+        max-width: 500px;
+        max-height: 700px;
+        padding: 100px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        
+    }
+    .calculator input{
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .button{
+        display: grid;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    #submit{
+        padding: 10px 20px 10px 20px;
+        border-radius: 8px;
+        border: none;
+        font-size: 18px;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        color: #fff;
+        background-color: #130458c1;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    #submit span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+    #submit span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+    
+    #submit:hover span {
+        padding-right: 25px;
+    }
+    
+    #submit:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+    #submit:hover{
+        background-color: #e4d2fd;
+        color: black;
+    }
+    .output{
+        margin-top: 50px;
+        width: 500px;
+        height: 250px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        border-radius: 20px;
+    }
+    .container{
+        display: grid; 
+        max-height: 100%;
+        max-width: 100%;
+        border: 3px solid rgba(248, 232, 232, 0.119);
+        padding: 10px;
+        margin: 30px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .sub-container{
+        background-color: rgba(240, 248, 255, 0.785);
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: rgba(22, 22, 193, 0.25) 0px 30px 60px -12px inset, rgba(62, 33, 232, 0.3) 0px 18px 36px -18px inset;
+        font-size: 15px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    footer{
+        display: grid;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        background-color: #fff;
+        margin-top: 20px;
+        border-radius: 10px;
+        color: #0e0c26;
+    }
+</style>
+<body>
+    <h3>SGPA to PERCENTAGE Calculator</h3>
+    <div class="calculator">
+    <div class="input">
+        <form>
+            <p>Enter ODD SEM SGPA</p>
+            <input type="text" id="odd-sgpa" placeholder="Enter Sgpa">
+            <p>Enter EVEN SEM SGPA</p>
+            <input type="text" id="even-sgpa" placeholder="Enter Sgpa"><br>            <div class="button">
+                <button id="submit"><span>Submit</span></button>
+            </div>
+        </form>
+    </div>
+    <div class="output">
+        <h3>Output</h3>
+        <div class="container">
+            <div class="sub-container">
+                <span class="result"></span>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>@2023 all Copyreight reserved by Subhadip </footer>
+    <script src="script.js"></script>
+</body>
+</html>
